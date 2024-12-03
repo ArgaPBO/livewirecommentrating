@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+	
+use App\Livewire\Home;
+use App\Livewire\Input;
+use App\Livewire\Crud;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/', Input::class)->name('Input');
+Route::get('/input', Input::class)->name('Input');
+Route::get('/crud', Crud::class)->name('Crud');
